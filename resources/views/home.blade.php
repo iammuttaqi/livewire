@@ -15,8 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
                 </div>
+
             </div>
+            <livewire:counter/>
         </div>
     </div>
 </div>
