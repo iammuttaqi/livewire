@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('livewire', function() {
-    return view('livewire');
+	$all_comments = Comment::latest()->get();
+    return view('livewire', compact('all_comments'));
 });

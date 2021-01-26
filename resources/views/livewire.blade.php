@@ -8,7 +8,7 @@
 				<div class="card">
 					<div class="card-header card-header-primary">Comments</div>
 					<div class="card-body">
-						<livewire:comments/>
+						<livewire:comments :allComments="$all_comments"/>
 					</div>
 				</div>
 			</div>

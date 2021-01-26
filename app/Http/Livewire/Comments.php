@@ -26,9 +26,14 @@ class Comments extends Component
 
 	public function destroy($id)
 	{
-		Comment::findOrFail($id)->delete();;
+		Comment::find($id)->delete();;
 		session()->flash('message', 'Comment deleted!');
 		$this->render();
+	}
+
+	public function mount($allComments)
+	{
+		return $allComments;
 	}
 
     public function render()
